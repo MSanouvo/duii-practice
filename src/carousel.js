@@ -18,7 +18,25 @@ florkOkay.src = Okay
 const imageArray = []
 
 const carousel = document.querySelector('#carousel-container')
-const frame = document.querySelector('#frame')
+const pictureArray = document.querySelector('#pictures')
+const left = document.querySelector('#left')
+const right = document.querySelector('#right')
+
+function shiftLeft(){
+    left.addEventListener('click', ()=>{
+        const firstElement = imageArray.shift()
+        imageArray.push(firstElement)
+        imageCarousel()
+    })
+}
+
+function shiftRight(){
+    right.addEventListener('click', ()=>{
+        const lastElement = imageArray.pop()
+        imageArray.unshift(lastElement)
+        imageCarousel()
+    })
+}
 
 function addImageToArray(){
     imageArray.push(florkBigHeart)
@@ -26,13 +44,22 @@ function addImageToArray(){
     imageArray.push(florkOkay)
     imageArray.push(florkPlease)
     imageArray.push(florkConfused)
-    console.log(imageArray)
 }
 
 function imageCarousel(){
-    addImageToArray()
-    for(let i=0; i<imageArray.length; i++){
-        frame.appendChild(imageArray[i])
+    while(pictureArray.firstChild){
+        pictureArray.removeChild(pictureArray.lastChild)
+    }
+    console.log(imageArray)
+    let i=0
+    while(i<imageArray.length){
+        pictureArray.appendChild(imageArray[i])
+        if(i === 2){
+            imageArray[i].className = 'frame'
+        } else{
+            imageArray[i].className = 'normal'
+        }
+        i++
     }
     
 
@@ -40,4 +67,4 @@ function imageCarousel(){
 }
 
 
-export {imageCarousel}
+export {imageCarousel, shiftLeft, shiftRight ,addImageToArray}

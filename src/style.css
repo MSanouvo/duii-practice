@@ -51,20 +51,29 @@ body {
   gap: 5px;
 }
 
-#frame{
+#pictures{
   /* border: 3px solid black; */
   width: auto;
-  height: 200px;
+  height: 250px;
   display: flex;
   gap: 5px;
+  align-items: center;
+}
+
+.frame{
+  /* border: 2px solid black; */
+  height: 250px;
+}
+
+.normal{
+  height: 200px;
 }
 
 .arrow{
-  height: 30px;
   width: 30px;
   fill: rgb(255, 255, 255);
 }
 
 .arrow:hover{
-  height: 35px;
+  fill: rgb(179, 179, 179);
 }

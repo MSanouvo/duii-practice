@@ -1,3 +1,42 @@
-body{
-    background-color: lavender;
+body {
+  background-color: lavender;
 }
+
+#menu{
+  border: 1px solid black;
+  width: 100px;
+  background-color: white;
+  text-align: center;
+  display: grid;
+}
+
+.drop-menu{
+  background-color: white;
+  border: 1px solid black;
+}
+
+#item-container{
+  background-color: white;
+  width: 100px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#items{
+  display: grid;
+  gap: 5px;
+}
+
+.item:hover{
+  background-color: rgb(173, 173, 173);
+}
+
+.visible{
+  visibility: visible;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+

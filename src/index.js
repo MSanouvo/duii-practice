@@ -1,7 +1,20 @@
-import "./style.css"
+import "./style.css";
 
-const content = document.querySelector('#content')
-const child = document.createElement('span')
-child.textContent = 'Hello'
+const dropdownMenu = document.querySelector('.drop-menu')
+const itemList = document.querySelector('#item-container')
 
-content.appendChild(child)
+addDropdown(dropdownMenu, itemList)
+
+function addDropdown(parent, child){
+    //Configure CSS so that:
+    //hidden === visibility: hidden;
+    //visible === visibility: visible;
+    child.className = 'hidden'
+    parent.addEventListener('click', ()=>{
+        if(child.className === 'visible'){
+            child.className = 'hidden'
+        } else{
+            child.className = 'visible'
+        }
+    })
+}

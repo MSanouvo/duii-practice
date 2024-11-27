@@ -39,4 +39,32 @@ body {
   visibility: hidden;
 }
 
+/* ---------- Carousel ---------- */
 
+#carousel-container{
+  border: 3px solid black;
+  width: auto;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+#frame{
+  /* border: 3px solid black; */
+  width: auto;
+  height: 200px;
+  display: flex;
+  gap: 5px;
+}
+
+.arrow{
+  height: 30px;
+  width: 30px;
+  fill: rgb(255, 255, 255);
+}
+
+.arrow:hover{
+  height: 35px;
+}

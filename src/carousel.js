@@ -32,10 +32,14 @@ function shiftLeft(){
 
 function shiftRight(){
     right.addEventListener('click', ()=>{
-        const lastElement = imageArray.pop()
-        imageArray.unshift(lastElement)
-        imageCarousel()
+        changeRight()
     })
+}
+
+function changeRight(){
+    const lastElement = imageArray.pop()
+    imageArray.unshift(lastElement)
+    imageCarousel()
 }
 
 function addImageToArray(){
@@ -67,4 +71,4 @@ function imageCarousel(){
 }
 
 
-export {imageCarousel, shiftLeft, shiftRight ,addImageToArray}
+export {imageCarousel, shiftLeft, shiftRight ,addImageToArray, changeRight}

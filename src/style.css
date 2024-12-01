@@ -40,24 +40,35 @@ body {
 }
 
 /* ---------- Carousel ---------- */
-
-#carousel-container{
+#carousel,
+#carousel2{
+  display: grid;
   border: 3px solid black;
+  grid-template-rows: 1fr 20px;
+  gap: 5px;
+}
+
+#carousel-container,
+#carousel-container2{
+  /* border: 3px solid black; */
   width: auto;
   height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
+  overflow: hidden;
 }
 
-#pictures{
+#pictures,
+#pictures2{
   /* border: 3px solid black; */
   width: auto;
   height: 250px;
   display: flex;
   gap: 5px;
   align-items: center;
+  transition: 100ms;
 }
 
 .frame{
@@ -67,6 +78,7 @@ body {
 
 .normal{
   height: 200px;
+  /* opacity: 0; */
 }
 
 .arrow{
@@ -76,4 +88,32 @@ body {
 
 .arrow:hover{
   fill: rgb(179, 179, 179);
+}
+
+#nav-dots{
+  display: flex;
+  gap: 5px;
+  align-self: center;
+  justify-self: center;
+}
+
+.dots{
+  height: 10px;
+  width: 10px;
+  background-color: rgb(245, 0, 0);
+  border-radius: 10px;
+}
+
+.active{
+  height: 10px;
+  width: 10px;
+  background-color: rgb(0, 68, 255);
+  border-radius: 10px;
+}
+
+.dots:hover{
+  height: 12px;
+  width: 12px;
+  transition: 100ms;
+  background-color: rgb(206, 206, 206);
 }

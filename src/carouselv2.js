@@ -40,7 +40,8 @@ function currentSlide(){
     console.log(dots)
     for(let i = 0; i<dots.length; i++){
         dots[i].addEventListener('click', ()=>{
-            renderImages(currentImage = i=1)
+            console.log(dots)
+            renderImages(currentImage = i+1)
         })
     }
 }
@@ -59,7 +60,6 @@ function addImageToArray2(){
 }
 
 function renderImages(n){
-    console.log(imageArray)
     let i= 0
     
     for(i=0; i<imageArray.length; i++){
@@ -70,10 +70,10 @@ function renderImages(n){
 
 
     for (i=0; i< dots.length; i++){
-        dots[i].className = dots[i].className.replace('active', "")
+    dots[i].className = dots[i].className.replace(' active', "")
     }
     imageArray[currentImage-1].className = 'frame'
-    dots[currentImage-1].className += "active"
+    dots[currentImage-1].className += " active"
 
 }
 
